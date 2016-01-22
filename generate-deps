@@ -1,0 +1,3 @@
+#!/bin/bash
+dot -Tpdf -odependencies.pdf dependencies.dot
+dot -Tpng -Gsize=6,9 -Gdpi=100 -odependencies.png dependencies.dot

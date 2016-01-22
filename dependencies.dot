@@ -1,0 +1,50 @@
+digraph dependencies {
+
+  node [shape="box", style="filled", fillcolor="white"]
+
+  bloom     [label="Bloom",       fillcolor="gray"];
+  algebra   [label="Algebra",     fillcolor="gray"];
+  collect   [label="Collections", fillcolor="gray"];
+  tries     [label="Tries",       fillcolor="gray"];
+
+  ticket    [label="Ticket"];
+  radix4    [label="Radix 4"];
+  keycode   [label="Keycode"];
+  coding    [label="Coding"];
+  permute   [label="Permute"];
+  storage   [label="Storage"];
+  bits      [label="Bits"];
+  hashing   [label="Hashing"];
+  streams   [label="Streams"];
+  geo       [label="Geo"];
+  money     [label="Money"];
+  choose    [label="Choose"];
+  fundament [label="Fundament"];
+
+
+  bloom -> {algebra storage bits hashing}
+
+  algebra -> {hashing collect permute choose fundament}
+
+  collect -> {storage hashing fundament}
+
+  tries -> {storage bits streams fundament}
+
+
+  ticket -> {coding bits}
+
+  keycode -> bits;
+
+  coding -> bits;
+
+  permute -> { storage bits}
+
+  storage -> {bits fundament}
+
+  bits -> {hashing streams fundament}
+
+  hashing -> {streams choose}
+
+  streams -> fundament;
+
+}
