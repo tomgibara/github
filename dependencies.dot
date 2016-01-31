@@ -6,13 +6,13 @@ digraph dependencies {
   algebra   [label="Algebra",     fillcolor="gray"];
   collect   [label="Collections", fillcolor="gray"];
   tries     [label="Tries",       fillcolor="gray"];
+  storage   [label="Storage",     fillcolor="gray"];
 
   ticket    [label="Ticket"];
   radix4    [label="Radix 4"];
   keycode   [label="Keycode"];
   coding    [label="Coding"];
   permute   [label="Permute"];
-  storage   [label="Storage"];
   bits      [label="Bits"];
   hashing   [label="Hashing"];
   streams   [label="Streams"];
