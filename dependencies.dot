@@ -2,6 +2,7 @@ digraph dependencies {
 
   node [shape="box", style="filled", fillcolor="white"]
 
+  perfect   [label="Perfect"      fillcolor="gray"];
   bloom     [label="Bloom",       fillcolor="gray"];
   algebra   [label="Algebra",     fillcolor="gray"];
   collect   [label="Collections", fillcolor="gray"];
@@ -21,6 +22,7 @@ digraph dependencies {
   choose    [label="Choose"];
   fundament [label="Fundament"];
 
+  perfect -> {hashing bloom collect storage permute}
 
   bloom -> {algebra storage bits hashing}
 
